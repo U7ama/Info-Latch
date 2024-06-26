@@ -4,7 +4,7 @@ import React,{useState} from 'react'
 import styles from "./navbar.module.css";
 import Link from 'next/link';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+import Megadropdown from '../MegaDropDown';
 const Navbar =  () => {
   const [hovered, setHovered] = useState(false);
 
@@ -27,10 +27,17 @@ const Navbar =  () => {
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("home")}
               onMouseLeave={handleMouseLeave}
             >Home</Link>
-            <Link href={"/"} onMouseEnter={() => handleMouseEnter("services")}
-              onMouseLeave={handleMouseLeave}
-              className='flex gap-2 justify-center items-center transition-all duration-150'
-            >Services {hovered === "services" ? <IoIosArrowUp /> : <IoIosArrowDown />} </Link>
+            <li onMouseEnter={() => handleMouseEnter("services")} onMouseLeave={handleMouseLeave}>
+            <Link href="/" className='flex gap-2 justify-center items-center transition-all duration-150'>
+              Services {hovered === "services" ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </Link>
+            {hovered === "services" && (
+              <div onMouseEnter={() => handleMouseEnter("services")} onMouseLeave={handleMouseLeave}>
+                  <Megadropdown/>
+              </div>
+          
+            )}
+          </li>
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("Industries")}
               onMouseLeave={handleMouseLeave}
               className='flex gap-2 justify-center items-center transition-all duration-150'
