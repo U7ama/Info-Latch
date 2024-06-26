@@ -5,6 +5,8 @@ import styles from "./navbar.module.css";
 import Link from 'next/link';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Megadropdown from '../MegaDropDown';
+import MegaDropDownCompany from '../MegadropdownForCompany';
+import MegaDropDownIndustries from '../MegaDropDownForIndustries';
 const Navbar =  () => {
   const [hovered, setHovered] = useState(false);
 
@@ -38,17 +40,35 @@ const Navbar =  () => {
           
             )}
           </li>
+          <li>
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("Industries")}
               onMouseLeave={handleMouseLeave}
               className='flex gap-2 justify-center items-center transition-all duration-150'
             >Industries {hovered === "Industries" ? <IoIosArrowUp /> : <IoIosArrowDown />} </Link>
+             {hovered === "Industries" && (
+              <div onMouseEnter={() => handleMouseEnter("Industries")} onMouseLeave={handleMouseLeave}>
+                  <MegaDropDownIndustries/>
+              </div>
+          
+            )}
+          </li>
+            
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("work")}
               onMouseLeave={handleMouseLeave}
             >Our Work</Link>
+            <li>
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("Company")}
               onMouseLeave={handleMouseLeave}
               className='flex gap-2 justify-center items-center transition-all duration-150'
             >Company {hovered === "Company" ? <IoIosArrowUp /> : <IoIosArrowDown />} </Link>
+             {hovered === "Company" && (
+              <div onMouseEnter={() => handleMouseEnter("Company")} onMouseLeave={handleMouseLeave}>
+                  <MegaDropDownCompany/>
+              </div>
+          
+            )}
+            </li>
+           
             <Link href={"/"} onMouseEnter={() => handleMouseEnter("Blog")}
               onMouseLeave={handleMouseLeave}
               className={`${hovered === "Blog" ? 'underline' : ''}`}

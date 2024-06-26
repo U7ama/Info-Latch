@@ -67,7 +67,7 @@ const OurServicesSection = () => {
   ];
 
   return (
-    <div className={`w-full ${height ? 'min-h-[800px]' : 'min-h-screen'} transition-all duration-200 trustedDiv bg-gradient-to-r from-forth to-tirtry flex flex-col items-center justify-start py-20 px-28 mt-10 text-secondary`}>
+    <div className={`w-full ${height ? 'min-h-[900px]' : 'min-h-screen'} transition-all duration-200 trustedDiv bg-gradient-to-r from-forth to-tirtry flex flex-col items-center justify-start py-20 px-28 mt-10 text-secondary`}>
       <div className='flex justify-between items-center'>
         <div>
           <h1 className='font-overlock text-5xl mb-4 font-semibold text-center'>
@@ -79,9 +79,9 @@ const OurServicesSection = () => {
           <hr className='mt-3 w-[200px] border-t-4 border-secondary items-center mx-auto' />
         </div>
       </div>
-      <div className='grid grid-cols-3 justify-between items-start gap-2 pt-20'>
+      <div className='grid grid-cols-3 justify-between items-start gap-2 pt-20 relative'>
         {Services.map((service) => (
-          <div key={service.id} className="relative">
+          <div key={service.id} >
             <div onClick={() => toggleDescription(service.id)} className={`max-w-[590px] min-h-[100px] ${visibleDescriptions[service.id] ? 'bg-white text-forth' : 'bg-[#082140] text-secondary'} font-poppins p-6 flex gap-4 transition-all duration-200 shadow-lg cursor-pointer`}>
               <div className='flex flex-col gap-4 text-center'>
                 <div className='flex gap-4 items-center'>
@@ -93,7 +93,7 @@ const OurServicesSection = () => {
               </div>
             </div>
             {visibleDescriptions[service.id] && (
-              <div className='flex justify-center mx-auto top-20 overflow-hidden flex-col absolute h-[390px] w-[1062px] bg-white text-primary z-40 mt-2 pt-6 px-10 font-poppins transition-all duration-150'>
+              <div className={`flex justify-center mx-auto left-0  overflow-hidden flex-col absolute h-[390px] w-[1062px] bg-white text-primary z-40 mt-2 pt-6 px-10 font-poppins transition-all duration-150`}>
                 <div className='flex justify-end items-center'>
                   <button onClick={() => toggleDescription(service.id)}><IoMdCloseCircle className='text-3xl text-forth' /></button>
                 </div>

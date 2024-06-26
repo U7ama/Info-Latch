@@ -1,9 +1,9 @@
 import Link from "next/link"
 
-
-export default function Megadropdown(){
+export default function MegaDropDownIndustries(){
     return(
-        <div className='absolute font-poppins  mx-auto overflow-hidden right-0 left-0   w-full bg-white shadow-lg py-10 px-20 items-center  flex'>
+        <>
+         <div className='absolute font-poppins  mx-auto overflow-hidden right-0 left-0   w-full bg-white shadow-lg py-10 px-20 items-center  flex'>
         <div className='flex items-center gap-6 justify-between w-full'>
           {/* Megadropdown content for Services */}
           <div>
@@ -58,5 +58,6 @@ export default function Megadropdown(){
           
         </div>
       </div>
+        </>
     )
 }

@@ -1,3 +1,4 @@
+
 import React from "react";
 import BookACallButton from "@/components/BookACallButton";
 import ExploreMeButton from "@/components/ExploreMeButton";
@@ -8,6 +9,7 @@ import ContactInfo from "@/components/Home/ContactInfo";
 import Resorces from "@/components/Home/Resorces";
 import TestimonialSlider from "@/components/Home/TestimonialSection";
 import TrustedBy from "@/components/Home/TrustedBy";
+
 export default function Home() {
   return (
     <div>
@@ -56,7 +58,7 @@ export default function Home() {
 <div className="px-28">
 <hr className=' border-t-2 border-forth w-full '/>
 </div>
-  
+
     </div>
   );
 }
