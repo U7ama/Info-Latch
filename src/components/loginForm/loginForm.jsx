@@ -11,13 +11,13 @@ const LoginForm = () => {
 
   return (
     <form action={formAction} className={styles.form}>
-        <input type="text" name="username" id="username" placeholder='username' />
-        <input type="password" name="password" id="password" placeholder='password' />
-        <button>Login</button>
+        <input  className=' px-6 py-5 focus:outline-0 border-b '  type="text" name="Username" id="username" placeholder='username' />
+        <input className=' px-6 py-5 focus:outline-0 border-b ' type="password" name="Password" id="password" placeholder='password' />
+       <div>
+       <button className=' py-3 px-8 bg-tirtry rounded-full text-white font-semibold'>Login</button>
+       </div>
         {state?.error}
-        <Link href="/register">
-            {"Don't have an account?"} <b>Register</b>
-        </Link>
+      
     </form>
   )
 }

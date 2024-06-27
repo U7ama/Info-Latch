@@ -13,29 +13,17 @@ const AdminPage = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        <div className={styles.col}>
+        {/* <div className={styles.col}>
             <Suspense fallback={<div>Loading...</div>}>
                 <AdminPosts />
             </Suspense>
-        </div>
+        </div> */}
         <div className={styles.col}>
-            <AdminPostForm userId={session.user.id} />
+            <AdminPostForm userId={session?.user?.id} />
         </div>
       </div>
-      <div className={styles.row}>
-        <div className={styles.col}>
-            <Suspense fallback={<div>Loading...</div>}>
-                <AdminUsers />
-            </Suspense>
-        </div>
-        <div className={styles.col}>
-            <AdminUserForm />
-        </div>
-      </div>
-      <div>
-        <h1 className="text-center text-xl">Contact information</h1>
-        <AdminContact />
-      </div>
+     
+     
     </div>
   )
 }

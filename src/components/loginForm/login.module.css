@@ -5,20 +5,10 @@
     gap: 30px;
   }
   
-  .form input{
+  /* .form input{
     padding: 20px;
     background-color: var(--bg);
     color: var(--textColor);
-    border: none;
-    border-radius: 5px;
-  }
+    border-bottom: 1px solid black;
   
-  .form button{
-    padding: 20px;
-    cursor: pointer;
-    background-color: var(--btn);
-    color: var(--textColor);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-  }
+  } */
