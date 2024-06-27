@@ -1,12 +1,11 @@
-import { getPost } from '@/lib/data';
-import React, { Suspense } from 'react'
+import { getPost } from "@/lib/data";
+import React, { Suspense } from "react";
 import styles from "./singlePost.module.css";
-import Image from 'next/image';
-import PostUser from '@/components/postUser/postUser';
-
+import Image from "next/image";
+import PostUser from "@/components/postUser/postUser";
 
 const getData = async (slug) => {
-  const res = await fetch(`https://next-js-14-blog-app.vercel.app/api/blog/${slug}`);
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -17,47 +16,92 @@ const getData = async (slug) => {
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
-
   const post = await getPost(slug);
 
   return {
-    title: post?.title,
-    description: post?.desc,
+    title: post?.title ?? "Untitled",
+    description: post?.desc ?? "No description available",
   };
 };
 
-
-
 const SinglePostPage = async ({ params }) => {
-    const { slug } = params;
-    const post = await getData(slug);
-     
+  const { slug } = params;
+  const post = await getData(slug);
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+
   return (
     <div className={styles.container}>
       {post.img && (
         <div className={styles.imgContainer}>
-            <Image src={post.img} alt="" fill className={styles.img} />
+          <Image
+            src={post.img}
+            alt={post.title ?? "Image"}
+            fill
+            className={styles.img}
+          />
         </div>
       )}
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>{post.title}</h1>
+        <h1 className={styles.title}>{post.title ?? "Untitled"}</h1>
         <div className={styles.detail}>
-            {post && (
-                <Suspense fallback={<div>Loading...</div>}>
-                    <PostUser userId={post.userId} />
-                </Suspense>
-            )}
-            <div className={styles.detailText}>
-                <span className={styles.detailTitle}>Published</span>
-                <span className={styles.detailValue}>
-                {post.createdAt?.toString().slice(4, 16)}
-                </span>
-            </div>
+          {post.userId && (
+            <Suspense fallback={<div>Loading...</div>}>
+              <PostUser userId={post.userId} />
+            </Suspense>
+          )}
+          <div className={styles.detailText}>
+            <span className={styles.detailTitle}>Published</span>
+            <span className={styles.detailValue}>
+              {post.createdAt
+                ? post.createdAt.toString().slice(4, 16)
+                : "Unknown"}
+            </span>
+          </div>
         </div>
-        <div className={styles.content}>{post.desc}</div>
+        <div className={styles.content}>
+          {post.desc ?? "No description available"}
+        </div>
+        <div className={styles.additionalDetails}>
+          <p>
+            <strong>Slug:</strong> {post.slug ?? "N/A"}
+          </p>
+          <p>
+            <strong>Head:</strong> {post.head ?? "N/A"}
+          </p>
+          <p>
+            <strong>View Count:</strong> {post.view_count ?? "N/A"}
+          </p>
+          <p>
+            <strong>Tags:</strong> {post.tags ?? "N/A"}
+          </p>
+          <p>
+            <strong>Featured Image:</strong> {post.featured_image ?? "N/A"}
+          </p>
+          <p>
+            <strong>Is Published:</strong> {post.is_published ?? "N/A"}
+          </p>
+          <p>
+            <strong>Publish Date:</strong> {post.publish_date ?? "N/A"}
+          </p>
+          <p>
+            <strong>Author:</strong> {post.author ?? "N/A"}
+          </p>
+          <p>
+            <strong>Excerpt:</strong> {post.excerpt ?? "N/A"}
+          </p>
+          <p>
+            <strong>Content:</strong> {post.content ?? "N/A"}
+          </p>
+          <p>
+            <strong>Read Time:</strong> {post.read_time ?? "N/A"}
+          </p>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SinglePostPage
+export default SinglePostPage;
