@@ -11,6 +11,7 @@ import "swiper/css";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "./home.css";
+import Image from "next/image";
 
 // import required modules
 
@@ -62,7 +63,7 @@ const CloudSection = () => {
                     Scalability Redefined by Our Cloud Solutions
                   </h2>
                   <p className=" px-20 text-sm">
-                    Figma Design's modern cloud solutions experts can help your
+                    Figma Designs modern cloud solutions experts can help your
                     business grow. We are trusted experts in cloud solutions,
                     and we offer safe, scalable cloud services that are made to
                     fit the needs of your business. Our experienced team makes
@@ -74,7 +75,7 @@ const CloudSection = () => {
           </div>
         </div>
         <div className="ml-[-30px]">
-          <img
+          <Image
             src="/cloud.jpg"
             alt="cloud"
             width={700}
