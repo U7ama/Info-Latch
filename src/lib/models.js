@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
       min: 3,
       max: 20,
@@ -33,7 +33,7 @@ const postSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
     },
     desc: {
       type: String,
@@ -44,11 +44,11 @@ const postSchema = new mongoose.Schema(
     },
     userId: {
       type: String,
-      required: true,
+      // required: true,
     },
     slug: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
     },
   },
@@ -64,7 +64,7 @@ const contactSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
     },
     phone: {
       type: String,
@@ -73,9 +73,11 @@ const contactSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-  }, {timestamps: true}
-)
+  },
+  { timestamps: true }
+);
 
 export const User = mongoose.models?.User || mongoose.model("User", userSchema);
 export const Post = mongoose.models?.Post || mongoose.model("Post", postSchema);
-export const Contact = mongoose.models?.Contact || mongoose.model("Contact",contactSchema);
+export const Contact =
+  mongoose.models?.Contact || mongoose.model("Contact", contactSchema);
