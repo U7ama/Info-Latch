@@ -2,7 +2,7 @@ import React from 'react'
 
 const GetConsultingSection = ({heading, text1, text2}) => {
   return (
-    <div className=' flex flex-col justify-center items-center min-h-screen px-20 text-center'>
+    <div className=' flex flex-col justify-center items-center min-h-[500px] px-20 text-center'>
       <h1 className=' text-6xl font-heading capitalize font-semibold'>
      {heading}
       </h1>

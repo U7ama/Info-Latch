@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import Resorces from '@/components/Home/Resorces';
 // import GetConsultingSection from '../../Components/GetConsultingSection';
+import BenefitsUs from './BenefitsWorkWithUs';
 import GetConsultingSection from '@/components/GetConsultingSection'; 
 const SoftwareOffers = () => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -73,13 +74,14 @@ const SoftwareOffers = () => {
     </div>
   
     <GetConsultingSection heading={" Interested in different services?"} text1={"Look no further. Your challenge, our expertise."} text2={"Schedule a call to share your idea!"}/>
+    <BenefitsUs/>
     <Resorces/>
     <div className='px-20 py-20 min-h-screen text-primary bg-gray-100'>
       <h1 className='text-4xl font-heading font-bold text-forth w-[700px]'>Why custom software solutions
       we develop are reliable </h1>
       <div className='py-20 grid grid-cols-2 gap-10'>
         {subServices.map(service => (
-           <div key={service.id}   className={` max-w-[590px]  min-h-[100px] font-poppins p-6 flex gap-4 transition-all duration-200 shadow-lg cursor-pointer`}>
+           <div key={service.id}   className={` max-w-[590px]  min-h-[100px] font-poppins p-6 flex gap-4 transition-all duration-200 border-t-2 border-tirtry cursor-pointer`}>
            <div className='flex flex-col gap-4 text-start'>
              <div className='flex gap-4 items-center'>
                <div className='border-2 border-forth p-6 flex items-center w-12 justify-center rounded-full h-12'>

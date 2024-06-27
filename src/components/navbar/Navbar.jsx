@@ -69,7 +69,7 @@ const Navbar =  () => {
             )}
             </li>
            
-            <Link href={"/"} onMouseEnter={() => handleMouseEnter("Blog")}
+            <Link href={"/blog"} onMouseEnter={() => handleMouseEnter("Blog")}
               onMouseLeave={handleMouseLeave}
               className={`${hovered === "Blog" ? 'underline' : ''}`}
             >Blog</Link>
