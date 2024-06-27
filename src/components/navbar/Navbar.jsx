@@ -121,9 +121,9 @@ const Navbar = () => {
           </Link>
         </ul>
       </div>
-      <button className="border-2 bg-tirtry text-secondary font-semibold rounded-full py-3 px-6 text-sm">
+      <Link href='/contact' className="border-2 bg-tirtry text-secondary font-semibold rounded-full py-3 px-6 text-sm">
         Contact US
-      </button>
+      </Link>
     </div>
   );
 };
