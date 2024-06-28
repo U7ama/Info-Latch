@@ -79,6 +79,7 @@ const CloudSection = () => {
             src="/cloud.jpg"
             alt="cloud"
             width={700}
+            height={400}
             className="relative z-10"
           />
         </div>
