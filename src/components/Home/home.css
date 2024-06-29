@@ -51,7 +51,7 @@
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .swiper-slide img {

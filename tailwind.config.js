@@ -10,13 +10,13 @@ module.exports = {
       fontFamily: {
         'sans' : 'sans-serif',
         'poppins': ["poppins"],
-        'overlock': ['Overlock'],
-        'heading' : ['Josefin Sans']
+        'overlock': ['Sofia Sans'],
+        'heading' : ['Sofia Sans']
       },
       colors: {
         primary: '#222831',
         secondary: '#fff',
-        tirtry: '#037ba5',
+        tirtry: '#EB455F',
         forth: '#102C57',
         fifth: "#f4f7f2"
       },

@@ -32,42 +32,44 @@ const CloudSection = () => {
             >
               <SwiperSlide>
                 <div className=" flex justify-center items-center flex-col py-20">
-                  <h2 className="text-xl font-bold px-10">
+                  <h2 className="text-3xl font-bold px-10 pb-4 capitalize font-heading text-forth">
                     {" "}
-                    Excellence in Digital Designs Experiences
+                    Software development
+
                   </h2>
                   <p className=" px-20 text-sm">
-                    We are experts in digital design at Figma Design, and we can
-                    make the best UI and UX designs for you. As one of the best
-                    design firms, we combine creativity with ease to make
-                    digital experiences that are truly engaging.
+                  Info Latch is an expert at creating custom software that is reliable, scalable, and appropriately matched to your company's specific needs. Whether you require enterprise software, integrated solutions, or a custom application, our experience promises excellent outcomes that advance your company. 
+
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className=" flex justify-center items-center flex-col py-20">
-                  <h2 className="text-xl font-bold px-10">
-                    Advanced AI Solutions Can Help Your business
+                  <h2 className="text-3xl font-bold px-10 pb-4 capitalize font-heading text-forth">
+                  Digital design
                   </h2>
                   <p className=" px-20 text-sm">
-                    Our team of AI experts has created AI solutions that will
-                    help you unlock the future. As a top company that uses
-                    artificial intelligence, we offer modern AI services that
-                    will improve and change the way your business works.
+                  With careful design of interfaces and an appealing style, we strive to create smooth and captivating user experiences with our digital design services. We place a high value on accessibility and usability to ensure that every digital interaction on web and mobile platforms matches your business identity and improves the user experience.
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className=" flex justify-center items-center flex-col py-20">
-                  <h2 className="text-xl font-bold px-10">
-                    Scalability Redefined by Our Cloud Solutions
+                  <h2 className="text-3xl font-bold px-10 pb-4 capitalize font-heading text-forth">
+                  AI solution
                   </h2>
                   <p className=" px-20 text-sm">
-                    Figma Designs modern cloud solutions experts can help your
-                    business grow. We are trusted experts in cloud solutions,
-                    and we offer safe, scalable cloud services that are made to
-                    fit the needs of your business. Our experienced team makes
-                    sure that everything works together easily and effectively.
+                  Info Latch creates innovative solutions by utilizing artificial intelligence to automate procedures, analyze trends in data, and provide knowledge that may be used. Our AI solutions enable businesses to optimize processes, identify trends, and make confident decisions based on data, ranging from machine learning techniques to natural language processing tools.
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className=" flex justify-center items-center flex-col py-20">
+                  <h2 className="text-3xl font-bold px-10 pb-4 capitalize font-heading text-forth">
+                  Cloud solution
+                  </h2>
+                  <p className=" px-20 text-sm">
+                  Reliable cloud solutions from Info Latch are designed to improve scalability and optimize your company's operations. Our expertise ensures secure, adaptable, and affordable solutions that support your growth and creative goals in today's digital ecosystem, whether you require help with cloud migration, infrastructure management, or SaaS implementation.
                   </p>
                 </div>
               </SwiperSlide>

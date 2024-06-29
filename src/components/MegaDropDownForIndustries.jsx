@@ -2,40 +2,40 @@ import Link from "next/link"
 import { FaCaretRight } from "react-icons/fa";
 export default function MegaDropDownIndustries(){
   const fintechItems =[
-   { id:1, to: '/', name: "Fintech Development & Api Integrations" },
-   { id:2,to: '/', name: "Accounting Software" },
-   { id:3,to: '/', name: "Credit & Loan Management" },
-   { id:4, to: '/', name: "Security & Fraud Preventation" },
+   { id:1, to: '/industries', name: "Fintech Development & Api Integrations" },
+   { id:2,to: '/industries', name: "Accounting Software" },
+   { id:3,to: '/industries', name: "Credit & Loan Management" },
+   { id:4, to: '/industries', name: "Security & Fraud Preventation" },
   ]
   
   const HealthCare =[
-   { id:1, to: '/', name: "HIPAA-Complaint Helathcare Software" },
-   { id:2,to: '/', name: "Telehealth & Telemedicine" },
-   { id:3,to: '/', name: "Health information management (EHR / EMR, HIS" },
-   { id:4, to: '/', name: "E-Prescribing Software" },
+   { id:1, to: '/industries', name: "HIPAA-Complaint Helathcare Software" },
+   { id:2,to: '/industries', name: "Telehealth & Telemedicine" },
+   { id:3,to: '/industries', name: "Health information management (EHR /industries EMR, HIS" },
+   { id:4, to: '/industries', name: "E-Prescribing Software" },
   ]
   const Food =[
-   { id:1, to: '/', name: "Food Delivery Applications" },
-   { id:2,to: '/', name: "Food Ordering Applications" },
-   { id:3,to: '/', name: "Resturant CRM System" },
-   { id:4, to: '/', name: "Integration with POS System" },
+   { id:1, to: '/industries', name: "Food Delivery Applications" },
+   { id:2,to: '/industries', name: "Food Ordering Applications" },
+   { id:3,to: '/industries', name: "Resturant CRM System" },
+   { id:4, to: '/industries', name: "Integration with POS System" },
   ]
   const Marketing =[
-   { id:1, to: '/', name: "Affliate program development" },
-   { id:2,to: '/', name: "Loyalty App Development" },
-   { id:3,to: '/', name: "Integration ( Google Analytics, CRM )" },
+   { id:1, to: '/industries', name: "Affliate program development" },
+   { id:2,to: '/industries', name: "Loyalty App Development" },
+   { id:3,to: '/industries', name: "Integration ( Google Analytics, CRM )" },
    
   ]
   const Travel =[
-   { id:1, to: '/', name: "Booking Application" },
-   { id:2,to: '/', name: "Hostel Management software and POS" },
-   { id:3,to: '/', name: "Travel and Portal Development" },
+   { id:1, to: '/industries', name: "Booking Application" },
+   { id:2,to: '/industries', name: "Hostel Management software and POS" },
+   { id:3,to: '/industries', name: "Travel and Portal Development" },
    
   ]
   const Edtech =[
-   { id:1, to: '/', name: "Learning Management System (LMS)" },
-   { id:2,to: '/', name: "E-Learning Application" },
-   { id:3,to: '/', name: "School Management Software" },
+   { id:1, to: '/industries', name: "Learning Management System (LMS)" },
+   { id:2,to: '/industries', name: "E-Learning Application" },
+   { id:3,to: '/industries', name: "School Management Software" },
    
   ]
     return(

@@ -5,15 +5,16 @@ const Resorces = () => {
   return (
     <div className=' min-h-screen w-full px-28 py-10 font-poppins flex justify-between items-center gap-10'>
 <div className='w-1/2'>
-<h1 className=' text-4xl capitalize font-bold font-overlock text-forth'>
+<h1 className=' text-5xl capitalize font-bold font-overlock text-forth'>
 Our work 
 </h1>
-<p className='w-[600px] pt-2 pb-6'>From concept to success: see our solutions in action
+<p className='w-[600px] pt-2 pb-3'>From concept to success: see our solutions in action
 </p>
-<h1 className=' text-3xl font-semibold font-poppins mb-4'>
-Uni <span className=' text-forth'>Hub </span> 
+<hr className=' border-t-4 border-tirtry mb-6 w-[200px] '/>
+<h1 className=' text-3xl font-semibold font-poppins mb-4 text-forth'>
+Uni Hub 
 </h1>
-<hr className=' border-t-4 border-tirtry mb-4 w-[100px] '/>
+
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit optio aliquid nam consequuntur eaque ab ea corporis molestiae non delectus ipsa deserunt maxime voluptatibus et temporibus maiores, adipisci nihil?</p>
 <br />
 <br />

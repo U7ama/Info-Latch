@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
+
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Megadropdown from "../MegaDropDown";
@@ -33,6 +34,7 @@ const Navbar = () => {
             href={"/"}
             onMouseEnter={() => handleMouseEnter("home")}
             onMouseLeave={handleMouseLeave}
+            className={`${hovered === "home" ? "text-tirtry" : ""}`}
           >
             Home
           </Link>
@@ -42,7 +44,7 @@ const Navbar = () => {
           >
             <Link
               href="/"
-              className="flex gap-2 justify-center items-center transition-all duration-150"
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'services' ?'text-tirtry': ""}`}
             >
               Services{" "}
               {hovered === "services" ? <IoIosArrowUp /> : <IoIosArrowDown />}
@@ -61,7 +63,7 @@ const Navbar = () => {
               href={"/"}
               onMouseEnter={() => handleMouseEnter("Industries")}
               onMouseLeave={handleMouseLeave}
-              className="flex gap-2 justify-center items-center transition-all duration-150"
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'Industries' ?'text-tirtry': ""}`}
             >
               Industries{" "}
               {hovered === "Industries" ? <IoIosArrowUp /> : <IoIosArrowDown />}{" "}
@@ -77,9 +79,10 @@ const Navbar = () => {
           </li>
 
           <Link
-            href={"/"}
+            href={"/work"}
             onMouseEnter={() => handleMouseEnter("work")}
             onMouseLeave={handleMouseLeave}
+            className={`${hovered === "work" ? "text-tirtry" : ""}`}
           >
             Our Work
           </Link>
@@ -88,7 +91,7 @@ const Navbar = () => {
               href={"/"}
               onMouseEnter={() => handleMouseEnter("Company")}
               onMouseLeave={handleMouseLeave}
-              className="flex gap-2 justify-center items-center transition-all duration-150"
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'Company' ?'text-tirtry': ""}`}
             >
               Company{" "}
               {hovered === "Company" ? <IoIosArrowUp /> : <IoIosArrowDown />}{" "}
@@ -107,7 +110,7 @@ const Navbar = () => {
             href={"/blog"}
             onMouseEnter={() => handleMouseEnter("Blog")}
             onMouseLeave={handleMouseLeave}
-            className={`${hovered === "Blog" ? "underline" : ""}`}
+            className={`${hovered === "Blog" ? "text-tirtry" : ""}`}
           >
             Blog
           </Link>
@@ -121,7 +124,7 @@ const Navbar = () => {
           </Link>
         </ul>
       </div>
-      <Link href='/contact' className="border-2 bg-tirtry text-secondary font-semibold rounded-full py-3 px-6 text-sm">
+      <Link href='/contact' className="border-2 bg-forth text-secondary font-semibold rounded-full py-3 px-6 text-sm">
         Contact US
       </Link>
     </div>

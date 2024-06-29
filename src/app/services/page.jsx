@@ -35,7 +35,7 @@ const Services = () => {
   return (
     <div>
         
-        <div className='bg-gradient-to-tr from-forth to-tirtry'>
+        <div className='bg-forth'>
         <div className="  flex justify-between pt-20 pb-10 gap-10">
         <div className='pt-20 min-h-fit flex justify-center items-start  text-secondary flex-col py-20 pl-20 w-[70%]'>
             <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Expert Software Development Services you’re looking for</h1>

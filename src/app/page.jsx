@@ -8,7 +8,7 @@ import ContactInfo from "@/components/Home/ContactInfo";
 import Resorces from "@/components/Home/Resorces";
 import TestimonialSlider from "@/components/Home/TestimonialSection";
 import TrustedBy from "@/components/Home/TrustedBy";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -73,6 +73,9 @@ export default function Home() {
       <div className="px-28">
         <hr className=" border-t-2 border-forth w-full " />
       </div>
+      {/* <Link href='https://wa.me/03446743886?text=Hello%20there' className="bottom-10 right-10  fixed">
+        <img src="/whatsapp.png" alt="sas" width={60} />
+      </Link> */}
     </div>
   );
 }

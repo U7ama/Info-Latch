@@ -68,7 +68,7 @@ const reviews = [
       >
       {reviews.map(review=> (
           <SwiperSlide key={review?.id} className=' shadow-md shadow-gray-200 flex flex-col items-start py-10     px-20 justify-start font-poppins'>
-          <div className=' flex gap-4 items-center' >
+          <div className=' flex gap-4 items-start' >
            <img src='/profile.jpg' alt="helo" className=' rounded-full w-16'  />
           <div className=' flex flex-col items-start'>
           <p className=' font-semibold text-forth'>{review.name}</p>
