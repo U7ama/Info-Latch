@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./blog.module.css";
 import PostCard from "@/components/postCard/postCard";
+import { headers } from "next/headers";
 
-const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/blog", {
+const getData = async (url) => {
+  const res = await fetch(`${url}/api/blog`, {
     next: { revalidate: 3600 },
   });
 
@@ -14,7 +15,12 @@ const getData = async () => {
   return res.json();
 };
 const BlogPage = async () => {
-  const posts = await getData();
+  const headerList = headers();
+  const fullUrl = headerList.get("x-full-url");
+
+  // Use the full URL as needed
+  console.log(fullUrl);
+  const posts = await getData(fullUrl);
 
   return (
     <div className={styles.container}>

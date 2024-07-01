@@ -3,9 +3,15 @@ import React, { Suspense } from "react";
 import styles from "./singlePost.module.css";
 import Image from "next/image";
 import PostUser from "@/components/postUser/postUser";
+import { headers } from "next/headers";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const headerList = headers();
+  const fullUrl = headerList.get("x-full-url");
+
+  // Use the full URL as needed
+  console.log(fullUrl);
+  const res = await fetch(`${fullUrl}/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -34,11 +40,11 @@ const SinglePostPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      {post.img && (
+      {post.featured_image?.data && (
         <div className={styles.imgContainer}>
           <Image
-            src={post.img}
-            alt={post.title ?? "Image"}
+            src={`data:${post.featured_image.contentType};base64,${post.featured_image.data}`}
+            alt={post.featured_image.name || post.title || "Image"}
             fill
             className={styles.img}
           />
@@ -56,7 +62,7 @@ const SinglePostPage = async ({ params }) => {
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
               {post.createdAt
-                ? post.createdAt.toString().slice(4, 16)
+                ? new Date(post.createdAt).toDateString().slice(4, 16)
                 : "Unknown"}
             </span>
           </div>
@@ -76,9 +82,6 @@ const SinglePostPage = async ({ params }) => {
           </p>
           <p>
             <strong>Tags:</strong> {post.tags ?? "N/A"}
-          </p>
-          <p>
-            <strong>Featured Image:</strong> {post.featured_image ?? "N/A"}
           </p>
           <p>
             <strong>Is Published:</strong> {post.is_published ?? "N/A"}

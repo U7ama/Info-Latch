@@ -9,6 +9,7 @@ import Resorces from "@/components/Home/Resorces";
 import TestimonialSlider from "@/components/Home/TestimonialSection";
 import TrustedBy from "@/components/Home/TrustedBy";
 import Link from "next/link";
+import Image from "next/image";
 export default function Home() {
   return (
     <div>
@@ -20,17 +21,19 @@ export default function Home() {
             className=" font-poppins  text-primary"
           >
             We focus on developing unique software solutions to accelerate your
-            business's expansion.
+            business&apos;s expansion.
           </p>
           <h1
             data-aos="fade-down"
             data-aos-duration="800"
             className="text-primary text-3xl py-4 font-overlock font-bold "
           >
-            Take your ideas to the next level with Info Latch's reliable
+            Take your ideas to the next level with Info Latch`&apos;s reliable
             creative and technical services. We provide premium, personalized
             software solutions to meet your specific company goals.{" "}
-            <span className=" text-forth">your vision's best future.</span>
+            <span className=" text-forth">
+              your vision`&apos;s best future.
+            </span>
           </h1>
 
           <div
@@ -60,21 +63,21 @@ export default function Home() {
       </div>
       <div className="logos">
         <div className="logos-slide">
-          <img src="/logos/1.svg" alt="0" />
-          <img src="/logos/2.svg" alt="two" />
-          <img src="/logos/3.svg" alt="two" />
-          <img src="/logos/4.svg" alt="two" />
-          <img src="/logos/5.svg" alt="two" />
-          <img src="/logos/6.svg" alt="two" />
-          <img src="/logos/7.svg" alt="two" />
-          <img src="/logos/8.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/1.svg" alt="0" />
+          <Image height={50} width={50} src="/logos/2.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/3.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/4.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/5.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/6.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/7.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/8.svg" alt="two" />
         </div>
       </div>
       <div className="px-28">
         <hr className=" border-t-2 border-forth w-full " />
       </div>
       {/* <Link href='https://wa.me/03446743886?text=Hello%20there' className="bottom-10 right-10  fixed">
-        <img src="/whatsapp.png" alt="sas" width={60} />
+        <Image height={50} width={50} src="/whatsapp.png" alt="sas" width={60} />
       </Link> */}
     </div>
   );

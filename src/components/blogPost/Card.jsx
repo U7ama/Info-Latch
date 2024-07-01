@@ -6,17 +6,20 @@ const Card = ({ post }) => {
   return (
     <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 h-auto">
       <div className="relative px-2 py-2 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-        <Image
-          src={post.img}
-          alt="card-image"
-          className="rounded-md"
-        />
+        {post.featured_image?.data && (
+          <Image
+            src={`data:${post.featured_image.contentType};base64,${post.featured_image.data}`}
+            alt={post.featured_image.name || "card-image"}
+            className="rounded-md"
+            layout="fill" // use layout="fill" to ensure the image fills the container
+            objectFit="cover" // ensure the image covers the container area
+          />
+        )}
       </div>
       <div className="p-6">
         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           {post.title}
         </h5>
-        
       </div>
       <div className="p-6 pt-0">
         <button
