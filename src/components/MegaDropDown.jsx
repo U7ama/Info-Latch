@@ -12,7 +12,7 @@ export default function Megadropdown(){
            <h3 className='font-bold font-heading  text-2xl my-4'>Software Development</h3>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4">
-             <li className="font-heading"><Link href="/services/">Custom Software Development <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Tailored tech Solutions</span></Link></li>
+             <li className="font-heading"><Link href="/services/software-dev/">Custom Software Development <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Tailored tech Solutions</span></Link></li>
              <li className="font-heading"><Link href="/services/webdev">Web Development <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Execptional Web Application</span></Link></li>
              <li className="font-heading"><Link href="/services/app-dev">Mobile Development <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Cross-platform & Natie Applications</span></Link></li>
              <li className="font-heading"><Link href="/services/saas-dev">SAAS Development <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Cross-platform & Natie Applications</span></Link></li>
@@ -22,12 +22,12 @@ export default function Megadropdown(){
           <div>
           <div className="mb-10">
             <img src="/s3.png" alt="s4" width={60}/>
-           <h3 className='font-bold font-heading   text-2xl my-4'>Digital Designs</h3>
+           <Link href="/design" className='font-bold font-heading   text-2xl my-4'>Digital Designs</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-xl mt-4">
-             <li className="font-heading"><Link href="/design">Wireframing & Prototyping <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Visual Sketches & Clickable prototyping</span></Link></li>
+             <li className="font-heading"><Link href="/design/wireframing-prototyping">Wireframing & Prototyping <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Visual Sketches & Clickable prototyping</span></Link></li>
              <li className="font-heading"><Link href="/design/ui-ux">UI/UX Design <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Friendly Interface</span></Link></li>
-             <li className="font-heading"><Link href="/design/ui-ux">Product Design <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Unique concepts, Integral design</span></Link></li>
+             <li className="font-heading"><Link href="/design/product">Product Design <br/> <span className=" text-sm text-gray-400 font-normal font-poppins">Unique concepts, Integral design</span></Link></li>
             
             </ul>
           </div>

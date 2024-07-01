@@ -43,7 +43,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <Link
-              href="/"
+              href="/services"
               className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'services' ?'text-tirtry': ""}`}
             >
               Services{" "}

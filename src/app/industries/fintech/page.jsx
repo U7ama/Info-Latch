@@ -6,7 +6,7 @@ import GetandEstimateButtn from "@/components/GetandEstimateButtn"
 import { BiLastPage, BiSolidBullseye } from "react-icons/bi";
 import GetConsultingSection from "@/components/GetConsultingSection";
 import { IoIosArrowForward } from "react-icons/io";
-import BenefitsUs from "../services/BenefitsWorkWithUs";
+import BenefitsUs from "@/app/services/BenefitsWorkWithUs";
 import { GoDotFill } from "react-icons/go";
 import ServiceCard from "@/components/ServiceCard";
 import { BiCategory } from "react-icons/bi";
@@ -17,7 +17,7 @@ import { SiCodeigniter, SiSpeedtest } from "react-icons/si";
 import { MdPages } from "react-icons/md";
 import { FaPagelines } from "react-icons/fa";
 import { AiOutlineAccountBook } from "react-icons/ai";
-export default function Industries (){
+export default function Fintech (){
   const [hoveredId, setHoveredId] = useState(null);
   const subServicesTwo = [
     {

@@ -29,7 +29,7 @@ export default function Home() {
           >
             Take your ideas to the next level with Info Latch's reliable
             creative and technical services. We provide premium, personalized
-            softwaresolutions to meet your specific company goals.{" "}
+            software solutions to meet your specific company goals.{" "}
             <span className=" text-forth">your vision's best future.</span>
           </h1>
 
