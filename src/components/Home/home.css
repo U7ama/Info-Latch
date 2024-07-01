@@ -145,12 +145,25 @@
     background-repeat: no-repeat;
     min-height: 350px;
   } */
-  .check{
+  .check {
     clip-path: polygon(0 41%, 100% 0, 75% 100%, 59% 46%);
+    background-image: linear-gradient(to bottom right, #037ba5, #037ba5, #8ac1eb);
+    height: 400px;
+    width: 400px;
+    transform: rotate(17deg) translateX(-100vw) scale(0.5);
+    animation: arrowEnter 2s forwards;
+    transition: transform 0.5s;
+}
 
+.check:hover {
+    transform: rotate(17deg) scale(1.05);
+}
 
-    background-image: linear-gradient(to bottom right ,#037ba5 ,#037ba5,#8ac1eb);
-height: 400px;
-width: 400px;
-transform: rotate(17deg);
-  }
+@keyframes arrowEnter {
+    0% {
+        transform: rotate(0deg) translateX(-100vw) scale(0.5);
+    }
+    100% {
+        transform: rotate(17deg) translateX(0) scale(1);
+    }
+}

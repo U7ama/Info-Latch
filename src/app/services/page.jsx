@@ -22,8 +22,8 @@ const Services = () => {
           id: 1,
           icon: IoLayersOutline,
           to: "/services/software-dev",
-          heading: "Software Development Services ",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+          heading: "Custom Software Development ",
+          description: "Info Latch has been serving leading enterprises and businesses across different industries with world-class software development services tailored to each client’s needs. Our professional developers leave no stone unturned in aligning your business goals with aesthetic and functional bespoke applications for improved productivity. Let us help you excel and be on top of your competition with our exceptional and tailored software products. "
         },
         {
           id: 2,
@@ -68,8 +68,10 @@ const Services = () => {
         <div className='bg-forth'>
         <div className="  flex justify-between pt-20 pb-10 gap-10">
         <div className='pt-20 min-h-fit flex justify-center items-start  text-secondary flex-col py-20 pl-20 w-[70%]'>
-            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>We are giving you perfect solutions with our services</h1>
-            <p className=' font-poppins pt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, modi. Doloremque quo aliquam sapiente ipsa delectus nisi consectetur ea, voluptatum ab accusamus enim dolores voluptas perspiciatis atque saepe repellendus voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate, pariatur commodi temporibus accusamus ab nostrum error deleniti accusantium, illum magnam rerum perferendis corrupti. Nam mollitia distinctio sed officiis totam?</p>
+            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Top-notch Software Development Services for an Outstanding User Experience!
+            </h1>
+            <p className=' font-poppins pt-6'>Info Latch is your go-to software development partner that has custom solutions for your business/enterprise. We blend our expertise with your innovative ideas to tailor a software development strategy unique to your business. Empower your business with our exceptional services to unleash its true potential and reach new heights. Talk to our experts today!
+            </p>
             <div  
       className=' py-6 flex gap-4 justify-start items-center'>
   <BookACallButton/>

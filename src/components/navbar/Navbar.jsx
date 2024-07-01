@@ -21,11 +21,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex justify-between py-6 px-28 fixed w-full font-poppins text-[15px] hrefp-0 left-0 right-0 z-10 text-primary bg-white border-b `}
+      className={`flex justify-between py-4 items-center px-28 fixed w-full font-poppins text-[15px] hrefp-0 left-0 right-0 z-10 text-primary bg-white border-b `}
     >
       <Link href={"/"}>
         <div>
-          <Image src="/Logoinfo.png" alt="LOGO" width={130} height={100} />
+          <Image src="/Logoinfo.png" alt="LOGO" width={100} height={70} />
         </div>
       </Link>
       <div>
