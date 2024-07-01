@@ -6,7 +6,7 @@ import GetandEstimateButtn from "@/components/GetandEstimateButtn"
 import { BiLastPage, BiSolidBullseye } from "react-icons/bi";
 import GetConsultingSection from "@/components/GetConsultingSection";
 import { IoIosArrowForward } from "react-icons/io";
-import BenefitsUs from "../services/BenefitsWorkWithUs";
+import BenefitsUs from "@/app/services/BenefitsWorkWithUs";
 import { GoDotFill } from "react-icons/go";
 import ServiceCard from "@/components/ServiceCard";
 import { BiCategory } from "react-icons/bi";
@@ -17,7 +17,7 @@ import { SiCodeigniter, SiSpeedtest } from "react-icons/si";
 import { MdPages } from "react-icons/md";
 import { FaPagelines } from "react-icons/fa";
 import { AiOutlineAccountBook } from "react-icons/ai";
-export default function Industries (){
+export default function Marketing (){
   const [hoveredId, setHoveredId] = useState(null);
   const subServicesTwo = [
     {
@@ -116,7 +116,7 @@ export default function Industries (){
         <div className='bg-forth'>
         <div className="  flex justify-between pt-20 pb-10 gap-10">
         <div className='pt-20 min-h-fit flex justify-center items-start  text-secondary flex-col py-20 pl-20 w-[70%]'>
-            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Fintech development services for seamless payment integration & banking apps</h1>
+            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Marketing development services for seamless payment integration & banking apps</h1>
             <p className=' font-poppins pt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, modi. Doloremque quo aliquam sapiente ipsa delectus nisi consectetur ea, voluptatum ab accusamus enim dolores voluptas perspiciatis atque saepe repellendus voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate, pariatur commodi temporibus accusamus ab nostrum error deleniti accusantium, illum magnam rerum perferendis corrupti. Nam mollitia distinctio sed officiis totam?</p>
             <div  
       className=' py-6 flex gap-4 justify-start items-center'>

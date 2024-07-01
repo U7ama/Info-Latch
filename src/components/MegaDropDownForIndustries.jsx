@@ -2,40 +2,40 @@ import Link from "next/link"
 import { FaCaretRight } from "react-icons/fa";
 export default function MegaDropDownIndustries(){
   const fintechItems =[
-   { id:1, to: '/industries', name: "Fintech Development & Api Integrations" },
-   { id:2,to: '/industries', name: "Accounting Software" },
-   { id:3,to: '/industries', name: "Credit & Loan Management" },
-   { id:4, to: '/industries', name: "Security & Fraud Preventation" },
+   { id:1, to: '/industries/fintech', name: "Fintech Development & Api Integrations" },
+   { id:2,to: '/industries/fintech', name: "Accounting Software" },
+   { id:3,to: '/industries/fintech', name: "Credit & Loan Management" },
+   { id:4, to: '/industries/fintech', name: "Security & Fraud Preventation" },
   ]
   
   const HealthCare =[
-   { id:1, to: '/industries', name: "HIPAA-Complaint Helathcare Software" },
-   { id:2,to: '/industries', name: "Telehealth & Telemedicine" },
-   { id:3,to: '/industries', name: "Health information management (EHR /industries EMR, HIS" },
-   { id:4, to: '/industries', name: "E-Prescribing Software" },
+   { id:1, to: '/industries/healt-care', name: "HIPAA-Complaint Helathcare Software" },
+   { id:2,to: '/industries/healt-care', name: "Telehealth & Telemedicine" },
+   { id:3,to: '/industries/healt-care', name: "Health information management (EHR /industries EMR, HIS" },
+   { id:4, to: '/industries/healt-care', name: "E-Prescribing Software" },
   ]
   const Food =[
-   { id:1, to: '/industries', name: "Food Delivery Applications" },
-   { id:2,to: '/industries', name: "Food Ordering Applications" },
-   { id:3,to: '/industries', name: "Resturant CRM System" },
-   { id:4, to: '/industries', name: "Integration with POS System" },
+   { id:1, to: '/industries/food', name: "Food Delivery Applications" },
+   { id:2,to: '/industries/food', name: "Food Ordering Applications" },
+   { id:3,to: '/industries/food', name: "Resturant CRM System" },
+   { id:4, to: '/industries/food', name: "Integration with POS System" },
   ]
   const Marketing =[
-   { id:1, to: '/industries', name: "Affliate program development" },
-   { id:2,to: '/industries', name: "Loyalty App Development" },
-   { id:3,to: '/industries', name: "Integration ( Google Analytics, CRM )" },
+   { id:1, to: '/industries/marketing', name: "Affliate program development" },
+   { id:2,to: '/industries/marketing', name: "Loyalty App Development" },
+   { id:3,to: '/industries/marketing', name: "Integration ( Google Analytics, CRM )" },
    
   ]
   const Travel =[
-   { id:1, to: '/industries', name: "Booking Application" },
-   { id:2,to: '/industries', name: "Hostel Management software and POS" },
-   { id:3,to: '/industries', name: "Travel and Portal Development" },
+   { id:1, to: '/industries/travel', name: "Booking Application" },
+   { id:2,to: '/industries/travel', name: "Hostel Management software and POS" },
+   { id:3,to: '/industries/travel', name: "Travel and Portal Development" },
    
   ]
   const Edtech =[
-   { id:1, to: '/industries', name: "Learning Management System (LMS)" },
-   { id:2,to: '/industries', name: "E-Learning Application" },
-   { id:3,to: '/industries', name: "School Management Software" },
+   { id:1, to: '/industries/Edtech', name: "Learning Management System (LMS)" },
+   { id:2,to: '/industries/Edtech', name: "E-Learning Application" },
+   { id:3,to: '/industries/Edtech', name: "School Management Software" },
    
   ]
     return(
@@ -46,7 +46,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I1.jpg" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>Fintech</h3>
+           <Link href="/industries/fintech" className='font-bold  text-xl '>Fintech</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {fintechItems.map(item=>(
@@ -57,7 +57,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I2.jpg" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>HealthCare</h3>
+           <Link href="/industries/healt-care" className='font-bold  text-xl '>HealthCare</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {HealthCare.map(item=>(
@@ -68,7 +68,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I3.jpg" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>Food Services</h3>
+           <Link href="/industries/food" className='font-bold  text-xl '>Food Services</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {Food.map(item=>(
@@ -79,7 +79,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I4.png" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>Marketing</h3>
+           <Link href="/industries/marketing" className='font-bold  text-xl '>Marketing</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {Marketing.map(item=>(
@@ -90,7 +90,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I5.jpg" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>Travel & Hospitality</h3>
+           <Link href="/industries/travel" className='font-bold  text-xl '>Travel & Hospitality</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {Travel.map(item=>(
@@ -101,7 +101,7 @@ export default function MegaDropDownIndustries(){
           <div>
           <div className="mb-5 flex items-center gap-4">
             <img src="/indutries/I1.jpg" alt="s4" width={50}/>
-           <h3 className='font-bold  text-xl '>EdTech</h3>
+           <Link href="/industries/Edtech" className='font-bold  text-xl '>EdTech</Link>
            </div>
             <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
          {Edtech.map(item=>(

@@ -1,36 +1,66 @@
-import React from 'react'
+
+'use client'
+import React,{useState} from 'react'
 
 import GetandEstimateButtn from '@/components/GetandEstimateButtn';
+import GetConsultingSection from '@/components/GetConsultingSection';
 
-import { LuLaptop2 } from "react-icons/lu";
-import SoftwareOffers from './SoftwareOffers';
-import { BiMobileVibration } from "react-icons/bi";
-import { FaRegLightbulb } from "react-icons/fa";
-import { FaNetworkWired } from "react-icons/fa6";
+import { IoLayersOutline } from "react-icons/io5";
+import { SiClickhouse } from "react-icons/si";
+import { FaPagelines } from "react-icons/fa";
+import { MdPages } from "react-icons/md";
+import { BiLastPage } from "react-icons/bi";
+import { SiSpeedypage } from "react-icons/si";
+
+import ServiceCard from '@/components/ServiceCard';
 import BookACallButton from '@/components/BookACallButton';
+import { AiOutlineAntDesign } from 'react-icons/ai';
 const Services = () => {
-  const subServices= [
-    {
-        id:1,
-        name: ' Software Developmen',
-        icon: FaRegLightbulb
-    },
-    {
-        id:2,
-        name: 'Web Development',
-        icon: LuLaptop2
-    },
-    {
-        id:3,
-        name: 'Mobile Development',
-        icon: BiMobileVibration
-    },
-    {
-        id:4,
-        name: 'SaaS Development',
-        icon: FaNetworkWired
-    },
-]
+    const [hoveredId, setHoveredId] = useState(null);
+    const subServicesTwo = [
+        {
+          id: 1,
+          icon: IoLayersOutline,
+          to: "/services/software-dev",
+          heading: "Software Development Services ",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+        {
+          id: 2,
+          icon: AiOutlineAntDesign,
+          to: "/services",
+          heading: "Digital Design ",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+        {
+          id: 3,
+          icon: FaPagelines,
+          to: "/services",
+          heading: "Consulting ",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+        {
+          id: 4,
+          icon: MdPages,
+          to: "/services",
+          heading: "Cloud Solutions",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+        {
+          id: 5,
+          icon: BiLastPage,
+          to: "/services",
+          heading: "AI Solutions ",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+        {
+          id: 6,
+          icon: SiSpeedypage,
+          to: "/services",
+          heading: "Degital Marketing",
+          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
+        },
+      ]
 
   return (
     <div>
@@ -38,7 +68,7 @@ const Services = () => {
         <div className='bg-forth'>
         <div className="  flex justify-between pt-20 pb-10 gap-10">
         <div className='pt-20 min-h-fit flex justify-center items-start  text-secondary flex-col py-20 pl-20 w-[70%]'>
-            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Expert Software Development Services you’re looking for</h1>
+            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>We are giving you perfect solutions with our services</h1>
             <p className=' font-poppins pt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, modi. Doloremque quo aliquam sapiente ipsa delectus nisi consectetur ea, voluptatum ab accusamus enim dolores voluptas perspiciatis atque saepe repellendus voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate, pariatur commodi temporibus accusamus ab nostrum error deleniti accusantium, illum magnam rerum perferendis corrupti. Nam mollitia distinctio sed officiis totam?</p>
             <div  
       className=' py-6 flex gap-4 justify-start items-center'>
@@ -50,24 +80,20 @@ const Services = () => {
             <img src='/webdev.png' alt="helo" width={500}/>
         </div>
         </div>
-       <div className='px-20 text-secondary font-poppins pb-10'>
-       <h1 className=' text-3xl font-semibold mb-6 capitalize tracking-wider w-[700px]'>Our full-cycle software
-       development approach</h1>
-       <div className='flex justify-between items-center gap-6'>
-{subServices.map(service =>(
-    <div key={service.id} className=' my-10 flex flex-col gap-5'>
-    <div className='flex items-center gap-4'>
-<p className='border-2 p-4 rounded-full text-2xl'><service.icon/></p>
-<hr className='  border-t-2 border-white w-[200px]'/>
-    </div>
-    <h1 className='text-xl '>{service.name}</h1>
-</div>
-))}
-  </div>
- 
-       </div>
+    
         </div>
-        <SoftwareOffers/>
+        <div className='py-20 grid grid-cols-2 gap-10 px-20'>
+      {subServicesTwo.map(service => (
+        <ServiceCard
+          key={service.id}
+          service={service}
+          hoveredId={hoveredId}
+          btnText="Explore"
+          setHoveredId={setHoveredId}
+        />
+      ))}
+    </div>
+     <GetConsultingSection heading={" Interested in different services?"} text1={"Look no further. Your challenge, our expertise."} text2={"Schedule a call to share your idea!"}/>
     </div>
   )
 }

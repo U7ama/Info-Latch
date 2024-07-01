@@ -3,20 +3,20 @@ import Link from "next/link"
 import { FaCaretRight } from "react-icons/fa";
 export default function MegaDropDownCompany(){
   const About =[
-    { id:1, to: '/', name: "Company Leadership" },
-    { id:2,to: '/', name: "Our Leadership" },
-    { id:3,to: '/', name: "Testimonials" },
+    { id:1, to: '/about', name: "Company Leadership" },
+    { id:2,to: '/about', name: "Our Leadership" },
+    { id:3,to: '/about', name: "Testimonials" },
     
    ]
    
    const Carears =[
-    { id:1, to: '/', name: "Open Positions" },
-    { id:2,to: '/', name: "Send Your CV" },
+    { id:1, to: '/about', name: "Open Positions" },
+    { id:2,to: '/about', name: "Send Your CV" },
   
    ]
    const GetinTouch =[
-    { id:1, to: '/', name: "Estimator" },
-    { id:2,to: '/', name: "Book a call" },
+    { id:1, to: '/contact', name: "Estimator" },
+    { id:2,to: '/contact', name: "Book a call" },
    
    ]
  
@@ -36,17 +36,7 @@ export default function MegaDropDownCompany(){
       ))}
          </ul>
        </div>
-       <div>
-       <div className="mb-5 flex items-center gap-4">
-         <img src="/Company/C2.png" alt="s4" width={50}/>
-        <h3 className='font-bold  text-xl '>Carears</h3>
-        </div>
-         <ul className=" flex flex-col gap-2 text-lg mt-4 font-normal">
-      {Carears.map(item=>(
-            <li key={item.id}><Link href={item.to} className=" flex items-center gap-3"><FaCaretRight className=" text-forth"/>{item.name}</Link></li>
-      ))}
-         </ul>
-       </div>
+      
        <div>
        <div className="mb-5 flex items-center gap-4">
          <img src="/Company/C3.png" alt="s4" width={50}/>

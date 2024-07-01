@@ -10,75 +10,66 @@ import Resorces from "@/components/Home/Resorces";
 import GetConsultingSection from "@/components/GetConsultingSection"
 import BenefitsUs from "@/app/services/BenefitsWorkWithUs";
 import { GiLowTide } from "react-icons/gi";
-import { FaBusinessTime, FaFigma, FaHighlighter } from "react-icons/fa";
-import { PiEnvelopeThin, PiSortDescendingThin, PiUserCircleBold, PiUserCircleCheckDuotone, PiWebcamFill } from "react-icons/pi";
+import { FaBusinessTime, FaFigma, FaHighlighter, FaProductHunt } from "react-icons/fa";
+import { PiEnvelopeThin, PiSortDescendingThin, PiUserCircleBold, PiUserCircleCheckDuotone, PiUserCircleCheckFill, PiWebcamFill } from "react-icons/pi";
 import { IoLogoDesignernews } from "react-icons/io";
 import { TbDirectionSignOff } from "react-icons/tb";
 import { FaMobileRetro } from "react-icons/fa6";
 import { AiOutlineAntDesign } from "react-icons/ai";
-export default function UIUX(){
+import { SiDigikeyelectronics } from "react-icons/si";
+import { BsPencilFill } from "react-icons/bs";
+export default function Product(){
     const [hoveredId, setHoveredId] = useState(null);
     const subServices = [
         {
           id: 1,
           icon: FaBusinessTime,
-          heading: "Business Analysis & Research",
+          heading: "Concept Creation",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 2,
           icon: PiEnvelopeThin,
-          heading: "Wireframing & Prototyping",
+          heading: "Market Research",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 3,
-          icon: FaFigma,
-          heading: "Figma Mockups",
+          icon: PiUserCircleCheckFill,
+          heading: "User Research",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 4,
-          icon: AiOutlineAntDesign,
-          heading: "MVP Design",
+          icon: BsPencilFill,
+          heading: "A/B Testing and Conversion Optimization",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 5,
-          icon: PiWebcamFill,
-          heading: "Web Design",
+          icon: FaProductHunt,
+          heading: "Product Strategy and Conceptualization",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 6,
-          icon: FaMobileRetro,
-          heading: "Mobile-First Design",
+          icon: SiDigikeyelectronics,
+          heading: "Sketching and Wireframing",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 7,
           icon: PiSortDescendingThin,
-          heading: "Responsive Design",
+          heading: "Visual Design",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
         {
           id: 8,
           icon: TbDirectionSignOff,
-          heading: "Redesign",
+          heading: "Design System Creation",
           description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
         },
-        {
-          id: 9,
-          icon: IoLogoDesignernews,
-          heading: "User-Centric Interface Design",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
-        },
-        {
-          id: 10,
-          icon: PiUserCircleCheckDuotone,
-          heading: "User Testing",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis a ad amet, quia fugiat consequuntur totam saepe ipsa, necessitatibus temporibus, nam eveniet reiciendis soluta odio dignissimos quibusdam accusantium quam?"
-        },
+       
         
       ]
    
@@ -88,7 +79,8 @@ export default function UIUX(){
         <div className='bg-forth'>
         <div className="  flex justify-between pt-20 pb-10 gap-10">
         <div className='pt-20 min-h-fit flex justify-center items-start  text-secondary flex-col py-20 pl-20 w-[70%]'>
-            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Benefit from our UI/UX Design that Delivers Exceptional User Experiences and Business Growth</h1>
+            <h1 className=' text-6xl  font-poppins tracking-wide font-bold leading-tight'>Elevate Your Software
+            with Expert Product Design Services</h1>
             <p className=' font-poppins pt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, modi. Doloremque quo aliquam sapiente ipsa delectus nisi consectetur ea, voluptatum ab accusamus enim dolores voluptas perspiciatis atque saepe repellendus voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate, pariatur commodi temporibus accusamus ab nostrum error deleniti accusantium, illum magnam rerum perferendis corrupti. Nam mollitia distinctio sed officiis totam?</p>
             <div  
       className=' py-6 flex gap-4 justify-start items-center'>
@@ -102,7 +94,7 @@ export default function UIUX(){
         </div>
         </div>
         <div className='px-20 py-20 min-h-screen text-primary bg-gray-100'>
-      <h1 className='text-4xl font-heading font-bold text-forth'>UI/UX Design services we provide</h1>
+      <h1 className='text-4xl font-heading font-bold text-forth'>Product Design services we provide </h1>
       <div className='py-20 grid grid-cols-2 gap-10'>
         {subServices.map(service => (
           <div
@@ -124,9 +116,9 @@ export default function UIUX(){
      
     </div>
   
-    <GetConsultingSection heading={" Interested in different services?"} text1={"Look no further. Your challenge, our expertise."} text2={"Schedule a call to share your idea!"}/>
+    <GetConsultingSection heading={" Are you about to launch a new product?"} text2={"Schedule a call to share your idea!"}/>
     <Resorces heading="Our expertise in
-UI/UX Design"/>
+Product Design "/>
     <BenefitsUs/>
    
    
