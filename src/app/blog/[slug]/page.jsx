@@ -3,9 +3,15 @@ import React, { Suspense } from "react";
 import styles from "./singlePost.module.css";
 import Image from "next/image";
 import PostUser from "@/components/postUser/postUser";
+import { headers } from "next/headers";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const headerList = headers();
+  const fullUrl = headerList.get("x-full-url");
+
+  // Use the full URL as needed
+  console.log(fullUrl);
+  const res = await fetch(`${fullUrl}/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");

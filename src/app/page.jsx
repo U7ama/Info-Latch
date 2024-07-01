@@ -63,21 +63,21 @@ export default function Home() {
       </div>
       <div className="logos">
         <div className="logos-slide">
-          <Image src="/logos/1.svg" alt="0" />
-          <Image src="/logos/2.svg" alt="two" />
-          <Image src="/logos/3.svg" alt="two" />
-          <Image src="/logos/4.svg" alt="two" />
-          <Image src="/logos/5.svg" alt="two" />
-          <Image src="/logos/6.svg" alt="two" />
-          <Image src="/logos/7.svg" alt="two" />
-          <Image src="/logos/8.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/1.svg" alt="0" />
+          <Image height={50} width={50} src="/logos/2.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/3.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/4.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/5.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/6.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/7.svg" alt="two" />
+          <Image height={50} width={50} src="/logos/8.svg" alt="two" />
         </div>
       </div>
       <div className="px-28">
         <hr className=" border-t-2 border-forth w-full " />
       </div>
       {/* <Link href='https://wa.me/03446743886?text=Hello%20there' className="bottom-10 right-10  fixed">
-        <Image src="/whatsapp.png" alt="sas" width={60} />
+        <Image height={50} width={50} src="/whatsapp.png" alt="sas" width={60} />
       </Link> */}
     </div>
   );
