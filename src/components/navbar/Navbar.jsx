@@ -44,7 +44,9 @@ const Navbar = () => {
           >
             <Link
               href="/"
-              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'services' ?'text-tirtry': ""}`}
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${
+                hovered === "services" ? "text-tirtry" : ""
+              }`}
             >
               Services{" "}
               {hovered === "services" ? <IoIosArrowUp /> : <IoIosArrowDown />}
@@ -63,7 +65,9 @@ const Navbar = () => {
               href={"/"}
               onMouseEnter={() => handleMouseEnter("Industries")}
               onMouseLeave={handleMouseLeave}
-              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'Industries' ?'text-tirtry': ""}`}
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${
+                hovered === "Industries" ? "text-tirtry" : ""
+              }`}
             >
               Industries{" "}
               {hovered === "Industries" ? <IoIosArrowUp /> : <IoIosArrowDown />}{" "}
@@ -91,7 +95,9 @@ const Navbar = () => {
               href={"/"}
               onMouseEnter={() => handleMouseEnter("Company")}
               onMouseLeave={handleMouseLeave}
-              className={`flex gap-2 justify-center items-center transition-all duration-150 ${hovered === 'Company' ?'text-tirtry': ""}`}
+              className={`flex gap-2 justify-center items-center transition-all duration-150 ${
+                hovered === "Company" ? "text-tirtry" : ""
+              }`}
             >
               Company{" "}
               {hovered === "Company" ? <IoIosArrowUp /> : <IoIosArrowDown />}{" "}
@@ -112,7 +118,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
             className={`${hovered === "Blog" ? "text-tirtry" : ""}`}
           >
-            Blog
+            Blogs
           </Link>
           <Link
             href={"/admin"}
@@ -124,7 +130,10 @@ const Navbar = () => {
           </Link>
         </ul>
       </div>
-      <Link href='/contact' className="border-2 bg-forth text-secondary font-semibold rounded-full py-3 px-6 text-sm">
+      <Link
+        href="/contact"
+        className="border-2 bg-forth text-secondary font-semibold rounded-full py-3 px-6 text-sm"
+      >
         Contact US
       </Link>
     </div>

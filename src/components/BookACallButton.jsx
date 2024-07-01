@@ -13,7 +13,6 @@ const BookACallButton = () => {
 
   return (
     <div>
-    
       <div className=" bg-forth text-white py-4 px-10 rounded-full border hover:bg-white hover:text-forth border-white hover:border-forth font-semibold  font-poppins">
         {isClient && (
           <PopupButton
@@ -23,7 +22,6 @@ const BookACallButton = () => {
           />
         )}
       </div>
-
     </div>
   );
 };

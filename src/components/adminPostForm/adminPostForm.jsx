@@ -117,12 +117,12 @@ const AdminPostForm = ({ userId }) => {
           <div className="border w-full h-[100px] bg-secondary flex items-center justify-center">
             <label
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              htmlFor="file_input"
+              htmlFor="featured_image"
             >
               <IoCloudUploadOutline className="text-4xl text-primary w-full cursor-pointer" />
             </label>
             <input
-              className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              className="hidden"
               id="featured_image"
               type="file"
               name="featured_image"
@@ -134,7 +134,10 @@ const AdminPostForm = ({ userId }) => {
             Add
           </button>
         </div>
-        {state?.error}
+        {state?.error && <div className="text-red-500 mt-2">{state.error}</div>}
+        {state?.success && (
+          <div className="text-green-500 mt-2">Post added successfully!</div>
+        )}
       </form>
     </div>
   );

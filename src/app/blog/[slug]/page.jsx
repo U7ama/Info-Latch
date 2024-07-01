@@ -34,11 +34,11 @@ const SinglePostPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      {post.img && (
+      {post.featured_image?.data && (
         <div className={styles.imgContainer}>
           <Image
-            src={post.img}
-            alt={post.title ?? "Image"}
+            src={`data:${post.featured_image.contentType};base64,${post.featured_image.data}`}
+            alt={post.featured_image.name || post.title || "Image"}
             fill
             className={styles.img}
           />
@@ -56,7 +56,7 @@ const SinglePostPage = async ({ params }) => {
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
               {post.createdAt
-                ? post.createdAt.toString().slice(4, 16)
+                ? new Date(post.createdAt).toDateString().slice(4, 16)
                 : "Unknown"}
             </span>
           </div>
@@ -76,9 +76,6 @@ const SinglePostPage = async ({ params }) => {
           </p>
           <p>
             <strong>Tags:</strong> {post.tags ?? "N/A"}
-          </p>
-          <p>
-            <strong>Featured Image:</strong> {post.featured_image ?? "N/A"}
           </p>
           <p>
             <strong>Is Published:</strong> {post.is_published ?? "N/A"}

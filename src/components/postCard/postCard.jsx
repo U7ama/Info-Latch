@@ -4,17 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
+  console.log("post", post);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         {post.featured_image?.data && (
           <div className={styles.imgContainer}>
             <Image
-              src={`data:${
-                post.featured_image.contentType
-              };base64,${Buffer.from(post.featured_image.data).toString(
-                "base64"
-              )}`}
+              src={`data:${post.featured_image.contentType};base64,${post.featured_image.data}`}
               alt={post.featured_image.name || "Post image"}
               fill
               className={styles.img}

@@ -64,6 +64,7 @@ export const addPost = async (prevState, formData) => {
 
     revalidatePath("/blog");
     revalidatePath("/admin");
+    return { success: true };
   } catch (err) {
     console.log("Error:", err);
     return { error: "Something went wrong!" };
